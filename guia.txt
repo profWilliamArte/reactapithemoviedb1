@@ -1,2 +1,40 @@
-react-youtube
-npm i react-youtube
+1) npm create vite@latest .
+2) npm install react-router-dom ,  npm install react-youtube
+3) npm install bootstrap@5.3.3
+    en index.html si no se usa modales
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <script type="module" src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> // agregar type="module".
+    //
+    instalar npm install react-bootstrap bootstrap y colocar en main.jsx al usar modales
+        import "bootstrap/dist/css/bootstrap.min.css";
+        import "bootstrap/dist/js/bootstrap.bundle.js";
+
+
+
+    limpiar app.css, index.css
+4) crear las carpetas pages y components dentro de src
+5) crear los componentes Footer.jsx y Header.jsx "aplicar el rafce"
+    importar el navbar y un footer de bootstrap
+6) crear las paginas Inicio, Categorias, Detalle, Peliculas, Tendencias "aplicar el rafce"
+7) crear el sistema de ruteo comenzando por el app
+    en este ruteo utilizamos rutas dinamicas 
+    
+    <BrowserRouter>
+      <Header/>
+        <Routes>
+          <Route path="/" element={<Inicio/>} />
+          <Route path="/inicio" element={<Inicio/>} />
+          <Route path="/tendencias/:id" element={<Tendencias/>} />
+          <Route path="/categorias/:id/:tipo" element={<Categorias/>} />
+          <Route path="/detalle/:tipo/:id" element={<Detalle/>} />
+          <Route path="/peliculas/:id" element={<Peliculas/>} />
+          <Route path="*" element={<Inicio/>} />
+        </Routes>
+      <Footer/>
+   </BrowserRouter>
+
+8) modificar la barra de navegacion con todos los element de las paginas "Inicio, Tienda, Movil, Laptop, Categorias, Contactos"
+        <Link to="/inicio" className="nav-link active" aria-current="page" href="/">Inicio</Link> // "agregando Link to="/" con la ruta a la paginas"
+9) agregar un carrusel en el inicio
+
+
