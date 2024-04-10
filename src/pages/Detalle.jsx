@@ -30,7 +30,15 @@ const Detalle = () => {
             console.error(error);
         }
     };
-    const APIVideos         =`https://api.themoviedb.org/3/movie/${id}/videos?api_key=ecbcdcf9044928d12b179d9153f5a269&language=en-US` 
+    
+    let APIVideos="";
+    if(tipo=="cine") {
+        APIVideos =`https://api.themoviedb.org/3/movie/${id}/videos?api_key=ecbcdcf9044928d12b179d9153f5a269&language=en-US` 
+    }else{
+        APIVideos =`https://api.themoviedb.org/3/tv/${id}/videos?api_key=ecbcdcf9044928d12b179d9153f5a269&language=en-US` 
+       
+    }  
+
     const getVideo = async () => {  
         try {
             const response = await fetch(APIVideos);
