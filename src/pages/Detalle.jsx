@@ -44,9 +44,11 @@ const Detalle = () => {
     };
 
     let trailerkey;
-    {Array.isArray(datavideo) &&  datavideo[0].key!=="" ? trailerkey = datavideo[0].key  : null}
+    let ind;
+    {Array.isArray(datavideo) &&  datavideo[0].key!=="" ? ind = datavideo.length-1  : null}
+    {Array.isArray(datavideo) &&  datavideo[ind].key!=="" ? trailerkey = datavideo[ind].key  : null}
 
-   
+   console.log(trailerkey+" "+ind)
 
     
 
