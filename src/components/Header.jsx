@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import FiltroGenerosTv from "./FiltroGenerosTv";
 import FiltroGenerosCine from "./FiltroGenerosCine";
-import { useState } from "react";
+import logo from '../assets/logo.svg';
 
 
 
@@ -17,7 +17,7 @@ const Header = () => {
   return (
         <nav className="navbar navbar-expand-lg bg-black p-2" data-bs-theme="dark">
         <div className="container-fluid">
-            <a className="navbar-brand" href="#"><img src="logo.svg" alt="" width={200}  /></a>
+            <a className="navbar-brand" href="#"><img src={logo} alt="" width={200}  /></a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
             </button>
